@@ -1,5 +1,6 @@
 import express from "express";
 const app = express();
+const port = process.env.PORT|| 3000
 app.get("/karachi",(req,res)=> {
     res.send("welcome back Mr Usman ");
 })
@@ -9,10 +10,10 @@ app.get("/hello", (req, res) => {
 app.get("/profile", (req, res) => {
     res.send("my profile");
 })
-app.get("/about", (req, res) => {
+app.get("/", (req, res) => {
     res.send("my bio");
 })
-app.listen(3000,()=>
+app.listen(port,()=>
 {
     console.log("the port is runnng ")
 })
